@@ -1,8 +1,8 @@
 utilities\BrowserDriver$2.class
-com\qainfotech\advancedtatoc\PageActions.class
 utilities\BrowserDriver$1.class
 utilities\databaseConnection.class
 utilities\parser.class
+com\qainfotech\myntra\PageActions.class
 utilities\BrowserDriver.class
 utilties\loader.class
 utilities\databaseActions.class

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.qainfotech.advancedtatoc;
+package com.qainfotech.myntra;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -26,41 +26,42 @@ import utilities.parser;
  */
 public class PageActions {
 
-    static BrowserDriver driver;
+     BrowserDriver driver;
     static Boolean isPresent;
     parser parseJSON = new parser();
     
-    public Boolean startBrowserAndNavigate() {
-        this.driver = new BrowserDriver("chrome");
+    public Boolean startBrowserAndNavigate(String browser) {
+        this.driver = new BrowserDriver(browser);
         this.driver.manage().window().maximize();
         this.driver.get("https://www.myntra.com/men-tshirts");
 
         return true;
     }
     
-    public Boolean sort(){
+    public Boolean sort(String sortOrder){
         Actions action = new Actions(this.driver.typecastToWebdriver());
         WebElement mainMenu = this.driver.findVisibleElement(By.xpath("//*[@id='desktopSearchResults']/div[1]/section/div[1]/div[1]/div/div/div"));
         action.moveToElement(mainMenu); 
         action.build().perform();
 
-        WebElement subMenu = driver.findClickableElement(By.xpath("//*[@id='desktopSearchResults']/div[1]/section/div[1]/div[1]/div/div/div/ul/li[4]"));
+        WebElement subMenu = driver.findClickableElement(By.xpath(sortOrder));
         action.moveToElement(subMenu);
         action.click().build().perform();
         // this.failConditionCheck();
         return true;
     }
 
-    public Boolean checkListOrder() throws InterruptedException{
+    public Boolean checkListOrder(String order) throws InterruptedException{
         this.driver.waitForLoad(this.driver.typecastToWebdriver());
         List<Integer> firstFourPrices = new ArrayList<Integer>();
         List<Integer> firstFourPricesSorted = new ArrayList<Integer>();
         List<WebElement> elementlist = this.driver.findElements(By.cssSelector(".results-base .product-base"));
+        // System.out.println(elementlist.get(0).getText().substring(elementlist.get(0).getText().indexOf("Rs. ") + 4, elementlist.get(0).getText().length()));
         firstFourPrices.add(Integer.parseInt(elementlist.get(0).getText().substring(elementlist.get(0).getText().indexOf("Rs. ") + 4, elementlist.get(0).getText().length())));
         firstFourPrices.add(Integer.parseInt(elementlist.get(1).getText().substring(elementlist.get(1).getText().indexOf("Rs. ") + 4, elementlist.get(1).getText().length())));
         firstFourPrices.add(Integer.parseInt(elementlist.get(2).getText().substring(elementlist.get(2).getText().indexOf("Rs. ") + 4, elementlist.get(2).getText().length())));
         firstFourPrices.add(Integer.parseInt(elementlist.get(3).getText().substring(elementlist.get(3).getText().indexOf("Rs. ") + 4, elementlist.get(3).getText().length())));
-
+        
         firstFourPricesSorted.add(Integer.parseInt(elementlist.get(0).getText().substring(elementlist.get(0).getText().indexOf("Rs. ") + 4, elementlist.get(0).getText().length())));
         firstFourPricesSorted.add(Integer.parseInt(elementlist.get(1).getText().substring(elementlist.get(1).getText().indexOf("Rs. ") + 4, elementlist.get(1).getText().length())));
         firstFourPricesSorted.add(Integer.parseInt(elementlist.get(2).getText().substring(elementlist.get(2).getText().indexOf("Rs. ") + 4, elementlist.get(2).getText().length())));
@@ -71,7 +72,12 @@ public class PageActions {
         System.out.println( elementlist.get(2).getText().substring(elementlist.get(2).getText().indexOf("Rs. ") + 4, elementlist.get(2).getText().length()));
         System.out.println( elementlist.get(3).getText().substring(elementlist.get(3).getText().indexOf("Rs. ") + 4, elementlist.get(3).getText().length()));
 
-        Collections.sort(firstFourPrices, Collections.reverseOrder()); 
+        if(order == "desc"){
+             Collections.sort(firstFourPrices, Collections.reverseOrder()); 
+        }else{
+            Collections.sort(firstFourPrices, Collections.reverseOrder()); 
+        }
+       
         
         System.out.println(firstFourPrices.equals(firstFourPricesSorted));
        

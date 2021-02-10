@@ -1,9 +1,0 @@
-{
-	"mysql": {
-		"user": "tatocuser",
-		"password": "tatoc01",
-		"port": 3306,
-		"host": "10.0.1.86"
-	}
-	
-}

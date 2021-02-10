@@ -5,7 +5,7 @@
  */
 package utilities;
 
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
+// import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 import java.io.File;
 import java.util.List;
 import java.util.Set;
@@ -37,6 +37,7 @@ public final class BrowserDriver implements WebDriver {
     private final String browserName;
     private final int timeout = 30;
     private final String chromeDriverPath = "./src/drivers/chromedriver.exe";
+    private final String firefoxDriverPath = "./src/drivers/geckodriver.exe";
 
     public BrowserDriver(String browserName) {
         this.browserName = browserName;
@@ -70,7 +71,12 @@ public final class BrowserDriver implements WebDriver {
     }
 
     private WebDriver firefoxDriver() {
+        if (!new File(firefoxDriverPath).exists()) {
+            throw new RuntimeException("geckodriver.exe does not exist!");
+        }
         try {
+            System.setProperty("webdriver.gecko.driver",
+                    firefoxDriverPath);
             return new FirefoxDriver();
         } catch (Exception ex) {
             throw new RuntimeException("could not create the firefox driver");

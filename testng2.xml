@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Advanced Tatoc" verbose="1" parallel="tests" thread-count="4" configfailurepolicy="continue">
+	<test name="ProductListDesc_1" annotations="JDK" preserve-order="true">
+		<parameter name="browser" value= "chrome" />
+		<classes>
+			<class name="ProductListDesc"/>
+		</classes>
+	</test>
+	<test name="ProductListDesc_2" annotations="JDK" preserve-order="true">
+		<parameter name="browser" value= "chrome" />
+		<classes>
+			<class name="ProductListDesc"/>
+		</classes>
+	</test>
+
+
+</suite>

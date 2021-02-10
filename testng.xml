@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Advanced Tatoc" verbose="1" parallel="tests" thread-count="4" configfailurepolicy="continue">
+<suite name="PPL" verbose="1" parallel="tests" thread-count="4" configfailurepolicy="continue">
 	<!-- <test name="Tests" annotations="JDK" preserve-order="true">
 		<classes>
 			<class name="ProductListAsc"/>
@@ -9,17 +9,17 @@
 	</test> -->
 
 
-	<test name="FirefoxTest">
+	<!-- <test name="FirefoxTest">
 		<parameter name="browser" value="firefox" />
 		<classes>
 			<class name="ProductListAsc" />
 			<class name="ProductListDesc" />
 		</classes>
-	</test>
+	</test> -->
 	<test name="ChromeTest">
 		<parameter name="browser" value= "chrome" />
 		<classes>
-			<class name="ProductListAsc" />
+			<!-- <class name="ProductListAsc" /> -->
 			<class name="ProductListDesc" />
 		</classes>
 	</test>

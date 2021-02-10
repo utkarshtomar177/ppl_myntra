@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.BeforeClass;
 
+import res.PageObjects.pageLocator;
 
 
 /*
@@ -30,13 +31,13 @@ public class ProductListAsc {
 
 
     @Test
-    public void startBrowserAndNavigateToTatocAdvanced(){
-        Assert.assertTrue(pageAction.startBrowserAndNavigate(this.currentBrowser));
+    public void startBrowserAndNavigateToUrl(){
+        Assert.assertTrue(pageAction.startBrowserAndNavigate(this.currentBrowser , pageLocator.Url.get()));
     }
     
-    @Test(dependsOnMethods = {"startBrowserAndNavigateToTatocAdvanced"})
+    @Test(dependsOnMethods = {"startBrowserAndNavigateToUrl"})
     public void sortAsc(){
-        Assert.assertTrue(pageAction.sort("//*[@id='desktopSearchResults']/div[1]/section/div[1]/div[1]/div/div/div/ul/li[4]"));
+        Assert.assertTrue(pageAction.sort(pageLocator.sortDescending.get()));
     }
     
     @Test(dependsOnMethods = {"sortAsc"})

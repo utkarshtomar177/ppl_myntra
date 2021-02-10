@@ -7,6 +7,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.BeforeClass;
 
 
+import res.PageObjects.pageLocator;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -20,24 +21,26 @@ import org.testng.annotations.BeforeClass;
  */
 public class ProductListDesc {
     PageActions pageAction = new PageActions();
+    // PageObjects pageObjects = new PageObjects();
     String currentBrowser;
     @Parameters("browser")
     @BeforeClass
 
-  // Passing Browser parameter from TestNG xml
+
 
     public void beforeTest(String browser) {
         this.currentBrowser = browser;
     }
 
     @Test
-    public void startBrowserAndNavigateToTatocAdvanced(){
-        Assert.assertTrue(pageAction.startBrowserAndNavigate(this.currentBrowser));
+    public void startBrowserAndNavigateToUrl(){
+       
+        Assert.assertTrue(pageAction.startBrowserAndNavigate(this.currentBrowser , pageLocator.Url.get() ));
     }
     
-    @Test(dependsOnMethods = {"startBrowserAndNavigateToTatocAdvanced"})
+    @Test(dependsOnMethods = {"startBrowserAndNavigateToUrl"})
     public void sortDesc(){
-        Assert.assertTrue(pageAction.sort("//*[@id='desktopSearchResults']/div[1]/section/div[1]/div[1]/div/div/div/ul/li[4]"));
+        Assert.assertTrue(pageAction.sort(pageLocator.sortDescending.get()));
     }
     
     @Test(dependsOnMethods = {"sortDesc"})

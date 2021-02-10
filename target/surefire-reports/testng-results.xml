@@ -1,65 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-10T08:43:22Z" name="Advanced Tatoc" finished-at="2021-02-10T08:44:01Z" duration-ms="39259">
+  <suite started-at="2021-02-10T18:35:58Z" name="Advanced Tatoc" finished-at="2021-02-10T18:36:06Z" duration-ms="8336">
     <groups>
     </groups>
-    <test started-at="2021-02-10T08:43:22Z" name="FirefoxTest" finished-at="2021-02-10T08:43:55Z" duration-ms="32904">
-      <class name="ProductListAsc">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:ProductListAsc@3c0a50da]" started-at="2021-02-10T14:13:22Z" name="beforeTest" finished-at="2021-02-10T14:13:22Z" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="startBrowserAndNavigateToTatocAdvanced()[pri:0, instance:ProductListAsc@3c0a50da]" started-at="2021-02-10T14:13:22Z" name="startBrowserAndNavigateToTatocAdvanced" finished-at="2021-02-10T14:13:44Z" duration-ms="21590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowserAndNavigateToTatocAdvanced -->
-        <test-method signature="sortAsc()[pri:0, instance:ProductListAsc@3c0a50da]" started-at="2021-02-10T14:13:50Z" name="sortAsc" finished-at="2021-02-10T14:13:51Z" depends-on-methods="ProductListAsc.startBrowserAndNavigateToTatocAdvanced" duration-ms="1082" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sortAsc -->
-        <test-method signature="checkListOrder()[pri:0, instance:ProductListAsc@3c0a50da]" started-at="2021-02-10T14:13:51Z" name="checkListOrder" finished-at="2021-02-10T14:13:53Z" depends-on-methods="ProductListAsc.sortAsc" duration-ms="1900" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkListOrder -->
-      </class> <!-- ProductListAsc -->
+    <test started-at="2021-02-10T18:35:58Z" name="ProductListDesc_2" finished-at="2021-02-10T18:36:06Z" duration-ms="8249">
       <class name="ProductListDesc">
-        <test-method signature="startBrowserAndNavigateToTatocAdvanced()[pri:0, instance:ProductListDesc@19dc67c2]" started-at="2021-02-10T14:13:44Z" name="startBrowserAndNavigateToTatocAdvanced" finished-at="2021-02-10T14:13:50Z" duration-ms="6137" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowserAndNavigateToTatocAdvanced -->
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:ProductListDesc@19dc67c2]" started-at="2021-02-10T14:13:44Z" name="beforeTest" finished-at="2021-02-10T14:13:44Z" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="sortDesc()[pri:0, instance:ProductListDesc@19dc67c2]" started-at="2021-02-10T14:13:51Z" name="sortDesc" finished-at="2021-02-10T14:13:51Z" depends-on-methods="ProductListDesc.startBrowserAndNavigateToTatocAdvanced" duration-ms="379" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- sortDesc -->
-        <test-method signature="checkListOrder()[pri:0, instance:ProductListDesc@19dc67c2]" started-at="2021-02-10T14:13:53Z" name="checkListOrder" finished-at="2021-02-10T14:13:55Z" depends-on-methods="ProductListDesc.sortDesc" duration-ms="1793" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkListOrder -->
-      </class> <!-- ProductListDesc -->
-    </test> <!-- FirefoxTest -->
-    <test started-at="2021-02-10T08:43:22Z" name="ChromeTest" finished-at="2021-02-10T08:44:01Z" duration-ms="39259">
-      <class name="ProductListAsc">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:ProductListAsc@4461c7e3]" started-at="2021-02-10T14:13:22Z" name="beforeTest" finished-at="2021-02-10T14:13:22Z" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:ProductListDesc@429bd883]" started-at="2021-02-11T00:05:58Z" name="beforeTest" finished-at="2021-02-11T00:05:58Z" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,21 +18,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="startBrowserAndNavigateToTatocAdvanced()[pri:0, instance:ProductListAsc@4461c7e3]" started-at="2021-02-10T14:13:22Z" name="startBrowserAndNavigateToTatocAdvanced" finished-at="2021-02-10T14:13:40Z" duration-ms="17518" status="PASS">
+        <test-method signature="startBrowserAndNavigateToUrl()[pri:0, instance:ProductListDesc@429bd883]" started-at="2021-02-11T00:05:58Z" name="startBrowserAndNavigateToUrl" finished-at="2021-02-11T00:06:03Z" duration-ms="5095" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startBrowserAndNavigateToTatocAdvanced -->
-        <test-method signature="sortAsc()[pri:0, instance:ProductListAsc@4461c7e3]" started-at="2021-02-10T14:13:46Z" name="sortAsc" finished-at="2021-02-10T14:13:58Z" depends-on-methods="ProductListAsc.startBrowserAndNavigateToTatocAdvanced" duration-ms="11620" status="PASS">
+        </test-method> <!-- startBrowserAndNavigateToUrl -->
+        <test-method signature="sortDesc()[pri:0, instance:ProductListDesc@429bd883]" started-at="2021-02-11T00:06:03Z" name="sortDesc" finished-at="2021-02-11T00:06:05Z" depends-on-methods="ProductListDesc.startBrowserAndNavigateToUrl" duration-ms="1889" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sortAsc -->
-        <test-method signature="checkListOrder()[pri:0, instance:ProductListAsc@4461c7e3]" started-at="2021-02-10T14:13:58Z" name="checkListOrder" finished-at="2021-02-10T14:14:00Z" depends-on-methods="ProductListAsc.sortAsc" duration-ms="1800" status="PASS">
+        </test-method> <!-- sortDesc -->
+        <test-method signature="checkListOrder()[pri:0, instance:ProductListDesc@429bd883]" started-at="2021-02-11T00:06:05Z" name="checkListOrder" finished-at="2021-02-11T00:06:06Z" depends-on-methods="ProductListDesc.sortDesc" duration-ms="1245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkListOrder -->
-      </class> <!-- ProductListAsc -->
+      </class> <!-- ProductListDesc -->
+    </test> <!-- ProductListDesc_2 -->
+    <test started-at="2021-02-10T18:35:58Z" name="ProductListDesc_1" finished-at="2021-02-10T18:36:06Z" duration-ms="8336">
       <class name="ProductListDesc">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:ProductListDesc@35fc6dc4]" started-at="2021-02-10T14:13:40Z" name="beforeTest" finished-at="2021-02-10T14:13:40Z" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:ProductListDesc@473b46c3]" started-at="2021-02-11T00:05:58Z" name="beforeTest" finished-at="2021-02-11T00:05:58Z" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -95,19 +45,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="startBrowserAndNavigateToTatocAdvanced()[pri:0, instance:ProductListDesc@35fc6dc4]" started-at="2021-02-10T14:13:40Z" name="startBrowserAndNavigateToTatocAdvanced" finished-at="2021-02-10T14:13:46Z" duration-ms="6339" status="PASS">
+        <test-method signature="startBrowserAndNavigateToUrl()[pri:0, instance:ProductListDesc@473b46c3]" started-at="2021-02-11T00:05:58Z" name="startBrowserAndNavigateToUrl" finished-at="2021-02-11T00:06:03Z" duration-ms="5116" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startBrowserAndNavigateToTatocAdvanced -->
-        <test-method signature="sortDesc()[pri:0, instance:ProductListDesc@35fc6dc4]" started-at="2021-02-10T14:13:58Z" name="sortDesc" finished-at="2021-02-10T14:13:58Z" depends-on-methods="ProductListDesc.startBrowserAndNavigateToTatocAdvanced" duration-ms="440" status="PASS">
+        </test-method> <!-- startBrowserAndNavigateToUrl -->
+        <test-method signature="sortDesc()[pri:0, instance:ProductListDesc@473b46c3]" started-at="2021-02-11T00:06:03Z" name="sortDesc" finished-at="2021-02-11T00:06:04Z" depends-on-methods="ProductListDesc.startBrowserAndNavigateToUrl" duration-ms="1135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sortDesc -->
-        <test-method signature="checkListOrder()[pri:0, instance:ProductListDesc@35fc6dc4]" started-at="2021-02-10T14:14:00Z" name="checkListOrder" finished-at="2021-02-10T14:14:01Z" depends-on-methods="ProductListDesc.sortDesc" duration-ms="1518" status="PASS">
+        <test-method signature="checkListOrder()[pri:0, instance:ProductListDesc@473b46c3]" started-at="2021-02-11T00:06:04Z" name="checkListOrder" finished-at="2021-02-11T00:06:06Z" depends-on-methods="ProductListDesc.sortDesc" duration-ms="2066" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkListOrder -->
       </class> <!-- ProductListDesc -->
-    </test> <!-- ChromeTest -->
+    </test> <!-- ProductListDesc_1 -->
   </suite> <!-- Advanced Tatoc -->
 </testng-results>

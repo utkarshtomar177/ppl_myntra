@@ -1,3 +1,4 @@
+res\PageObjects$pageLocator.class
 utilities\BrowserDriver$2.class
 utilities\BrowserDriver$1.class
 utilities\databaseConnection.class
@@ -7,4 +8,5 @@ utilities\BrowserDriver.class
 utilties\loader.class
 utilities\databaseActions.class
 utilities\print.class
+res\PageObjects.class
 utilities\reader.class
